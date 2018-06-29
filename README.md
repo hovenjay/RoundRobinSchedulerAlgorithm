@@ -1,6 +1,6 @@
 # Round Robin Scheduler Algorithm
 
-Course design for Computer Operating System Theory Based on JavaScript implement round robin scheduler algorithm visualization.
+Course design for Computer Operating System Theory based on JavaScript implement round robin scheduler algorithm visualization.
 
 # 时间片轮转调度算法（基于 JavaScript 实现）
 
