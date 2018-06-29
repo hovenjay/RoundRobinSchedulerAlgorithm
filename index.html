@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>时间片轮转调度算法</title>
+    <link rel="icon" href="./images/cpu.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="./images/cpu.ico" type="image/x-icon" />
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/user.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row" id="controls">
+            <div class="col-md-1">
+                <label class="btn btn-primary" for="xFile">导入文件</label>
+                <form>
+                    <input type="file" id="xFile" onchange="jsReadFiles(this.files)" style="position:absolute;clip:rect(0 0 0 0);">
+                </form>
+            </div>
+            <div class="col-md-1">
+                <button class="btn btn-primary" onclick="creatPCB()">生成队列</button>
+            </div>
+            <div class="col-md-1">
+                <button class="btn btn-primary" id="startExec" onclick="startExec()" value="0">开始调度</button>
+            </div>
+            <div class="col-md-1">
+                <label id="text-times" class="text-center">时间片大小：</label>
+            </div>
+            <div class="col-md-1">
+                <input id="setTimes" class="form-control" type="number" min="100" max="10000" value="2000" />
+            </div>
+        </div>
+        <div class="row" id="viewports">
+            <div class="col-md-2">
+                <textarea id="cmd_int" class="form-control" rows="30" cols="30" placeholder="文件预览"></textarea>
+            </div>
+            <div class="col-md-2">
+                <h4 class="text-center">就绪队列</h4>
+                <ul class="list-group" id="C_Q">
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <h4 class="text-center">后备就绪队列</h4>
+                <ul class="list-group" id="BC_Q">
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <h4 class="text-center">输入等待队列</h4>
+                <ul class="list-group" id="I_Q">
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <h4 class="text-center">输出等待队列</h4>
+                <ul class="list-group" id="O_Q">
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <h4 class="text-center">其他等待队列</h4>
+                <ul class="list-group" id="W_Q">
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
+<script src="./js/jquery-1.11.1.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/user.js"></script>
