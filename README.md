@@ -63,4 +63,4 @@ H00
 
 ## 效果演示
 
-![演示图](https://github.com/hovenjay/RoundRobinSchedulerAlgorithm/blob/master/images/DiagrammaticSketch.gif)
+![演示图](https://github.com/hovenjay/RoundRobinSchedulerAlgorithm/blob/master/images/demonstration.gif)
